@@ -15,6 +15,7 @@ import { Button, ConnectButtonsContainer, Header, Logo } from './App.styles';
 import { GetAccounts } from './components/bitcoin/GetAccounts';
 import { GetBtcBalance } from './components/bitcoin/GetBtcBalance';
 import { SignMessage } from './components/bitcoin/SignMessage';
+import { SignPsbt } from './components/bitcoin/SignPsbt';
 import { GetInscriptions } from './components/GetInscriptions';
 import { GetRunesBalance } from './components/GetRunesBalance';
 import { SendInscription } from './components/sendInscriptions';
@@ -190,6 +191,7 @@ const BitcoinMethods = () => {
         addresses={[...btcAddressInfo]}
         onDisconnect={onDisconnect}
       />
+      <SignPsbt addresses={[...btcAddressInfo]} />
       <SignMessage addresses={[...btcAddressInfo]} />
       <SendBtc network={network} />
       <SendInscription network={network} />
